@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Copy, Sparkles, Globe2, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Copy, Sparkles, Globe2 } from 'lucide-react';
 
 // Language scripts and their transformations
 const scripts = {
@@ -261,7 +261,6 @@ const decorations = [
   { prefix: '❂', suffix: '❂', color: 'text-blue-600' },
   { prefix: '✾', suffix: '✾', color: 'text-emerald-500' }
 ];
-
 function App() {
   const [text, setText] = useState('');
   const [selectedScript, setSelectedScript] = useState('latin');
@@ -291,10 +290,11 @@ function App() {
         <div className="flex justify-center items-center mb-8">
           <h1 className="text-4xl font-bold flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
             <Sparkles className="w-8 h-8 text-purple-600" />
-            Multilingual Text Generator
+             Text Design Generator
             <Globe2 className="w-8 h-8 text-pink-600" />
           </h1>
         </div>
+
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -317,6 +317,7 @@ function App() {
                 ))}
               </select>
             </div>
+
             <div className="space-y-2">
               <label
                 htmlFor="input"
@@ -334,6 +335,7 @@ function App() {
               />
             </div>
           </div>
+
           <div className="space-y-2">
             <label className="block text-lg font-medium text-gray-700">
               Decorations
@@ -354,6 +356,7 @@ function App() {
               ))}
             </div>
           </div>
+
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-gray-800">
               Transformed Text
@@ -380,6 +383,7 @@ function App() {
                   </button>
                 </div>
               ))}
+
               <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <div>
                   <span className="text-sm font-medium text-gray-500">
@@ -398,81 +402,13 @@ function App() {
               </div>
             </div>
           </div>
+          
         </div>
+        
       </div>
-
-      {/* Footer */}
-      <footer className="mt-12 border-t border-gray-700">
-        <div className="container mx-auto px-4 py-8">
-          {/* Developer Info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* About */}
-            <div className="text-center md:text-left">
-              <h3 className="text-lg font-semibold text-white mb-3">About</h3>
-              <p className="text-gray-400">
-                TimeSync is a modern time synchronization tool built with precision and elegance.
-                Accurate time synchronized with atomic clock time servers.
-              </p>
-            </div>
-            {/* Contact */}
-            <div className="text-center">
-              <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
-              <div className="flex items-center justify-center space-x-2 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:ajmalj2003@gmail.com" className="hover:text-blue-400 transition-colors">
-                  ajmalj2003@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center justify-center space-x-2 text-gray-400 mt-2">
-                <Globe className="w-4 h-4" />
-                <a href="https://your-website.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                  coming soon
-                </a>
-              </div>
-            </div>
-            {/* Social Links */}
-            <div className="text-center md:text-right">
-              <h3 className="text-lg font-semibold text-white mb-3">Connect</h3>
-              <div className="flex justify-center md:justify-end space-x-4">
-                <a
-                  href="https://github.com/ajmalj05"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://twitter.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Copyright */}
-          <div className="text-center mt-8 pt-6 border-t border-gray-700">
-            <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} TimeGenie. Built with ❤️ by Ajmal J
-            </p>
-          </div>
-        </div>
-      </footer>
+      
     </div>
+    
   );
 }
 
